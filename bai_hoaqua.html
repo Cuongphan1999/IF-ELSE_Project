@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search" placeholder="enter fruit">
+    <button onclick="fruit()">Price</button>
+    <p id="result">0</p>
+
+    <script>
+        function fruit(){
+            let fruitInput = document.getElementById("search").value;
+            switch (fruitInput) {
+                case "Guava", "Watermelon":
+                    result = "20000 VND/kg";
+                break;
+                case "Apples", "Mango": 
+                    result = "30000 VND/kg"
+                break;
+                case "Rambutan": 
+                    result = "40000 VND/kg"
+                break;
+                case "Mangosteen":
+                    result = "50000 VND.kg"
+                break;
+            }
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
