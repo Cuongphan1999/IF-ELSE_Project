@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Math <input type="number" id="math" placeholder="enter math"> <br> <br>
+    Literature <input type="number" id="literature" placeholder="enter literature"> <br> <br>
+    English <input type="number" id="English" placeholder="enter english"> <br> <br>
+    KV <select id="selectKV">
+        <option value="1">KV1</option>
+        <option value="2">KV2-NT</option>
+        <option value="3">KV2</option>
+        <option value="4">KV3</option>
+    </select>
+    <br> <br>
+    <button onclick="score()">score</button>
+    <p id="result">00</p>
+
+    <script>
+        function score(){
+            let MathInput = +document.getElementById("math").value;
+            let LiteratureInput = +document.getElementById("literature").value;
+            let EnglishInput = +document.getElementById("English").value;
+            let KVInput = +document.getElementById("selectKV").value;
+            let result=0;
+            switch (KVInput){
+                case 1: 
+                    result = MathInput + LiteratureInput + EnglishInput + 0.75;
+                break;
+                case 2: 
+                    result = MathInput + LiteratureInput + EnglishInput + 0.5;
+                break;
+                case 3: 
+                    result = MathInput + LiteratureInput + EnglishInput + 0.25;
+                break;
+                case 4: 
+                    result = MathInput + LiteratureInput + EnglishInput;
+                break;
+            }
+
+            document.getElementById("result").innerHTML = result;
+
+
+        }
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
