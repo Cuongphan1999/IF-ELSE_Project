@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="result"></p>
+    <script>
+        let heightinput = +prompt("Height");
+        let weightinput = +prompt("Weight");
+        let total = weightinput / (heightinput * heightinput);
+        console.log(total) //check total
+        let result;
+        function BMI() {
+            if(total < 16){
+                result = "skinny grade III ";
+            }else if(total > 16 && total < 17) {
+                result = "skinny grade II ";
+            }else if(total > 18.5 && total < 25) {
+                result = "skinny grade I";
+            }else if(total > 18.5 && total < 25){
+                result = "Normal";
+            }else if(total > 25 && total < 30) {
+                result = "Overweigth";
+            }else if(total > 30 && total < 35) {
+                result = "Grade I obesity";
+            }else if(total > 35 && total < 40) {
+                result = "Grade II obesity";
+            }else if(total > 40){
+                result = "Grade III obesity";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+        BMI() 
+       
+
+
+
+
+    </script>
+</body>
+</html>
