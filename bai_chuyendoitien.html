@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>  
+    button{
+        width: 100px;
+        background-color: rgb(92, 64, 218);
+        color:azure 
+           
+    }
+    </style>
+    Amount <br><input type="number" id="Amount" placeholder="enter money">
+    <br>
+    From Currency <br>
+    <select id="curency1">
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+    </select>
+    <br>
+    To Currency <br>
+    <select id="curency2">
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+    </select>
+    <br>
+    <button onclick="check()">convert</button>
+    <p id="result">Result: </p>
+    <script>
+        function check () {
+            let AmountInput = document.getElementById("Amount").value;
+            let curencyinput1 = document.getElementById('curency1').value;
+            let curencyinput2 = document.getElementById('curency2').value;
+            result = (AmountInput * curencyinput2)/curencyinput1;
+            document.getElementById("result").innerHTML = result;
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
