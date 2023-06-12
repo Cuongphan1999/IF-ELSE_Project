@@ -8,19 +8,17 @@
 <body>
     
     <input type="number" id="year" placeholder="enter year">
-    <p id="result1">result: </p>
-    <p id="result2">result:</p>
     <button onclick="calculateresult()">Result</button>
 <script>
-    //1998
-    //buoc 1: tim Can: 8 + 6 =14 : lay 4
-    //buoc 2: tim Chi: 98 / 12 = 8 du 2 => lay 2
-    let YearInput = +document.getElementById("year").value;
-    let ChiInput = (YearInput % 12);
-    console.log(ChiInput)
-    let CanInput = (YearInput % 10);
-    console.log(CanInput)
-        function calculateresult(){
+    
+         function calculateresult(){
+
+        let YearInput = +document.getElementById("year").value;
+        let ChiInput = YearInput % 12;
+        console.log(ChiInput)
+        let CanInput = YearInput % 10;
+        console.log(CanInput)
+
             switch(CanInput){
         case 0: 
             result1 = "Canh";
@@ -92,6 +90,7 @@
     }
     console.log(result1 + "" + result2)
     //document.getElementById(${result1} "+" ${result2});
+    //alert(+a+ +(CanInput+ "" + c))
 
 
     }
